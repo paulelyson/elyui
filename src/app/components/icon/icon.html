@@ -1,1 +1,3 @@
-<p>icon works!</p>
+<div class="icon-wrapper" [class.clickable]="clickable" (click)="onClicked()">
+ <span class="material-symbols-outlined" [ngClass]="[size]">{{name }}</span>
+</div>
