@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Size, Variant } from '../../models/ui/common-config.model';
+import { Size, Variant } from '@/models/ui/common-config.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
