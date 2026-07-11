@@ -50,4 +50,9 @@
   --color-bg-success-idle: #cbe7ce;
   --color-bg-warning-idle: #ffedd5;
   --color-bg-danger-idle: #fce8e6;
+  --color-bg-primary-active: #539364;
+
+  /* Toggle */
+  --color-toggle-track-off: #ccc;
+  --color-toggle-thumb: #fff;
 }

@@ -163,4 +163,30 @@
   </div>
 </section>
 
+<section class="icon-overview">
+  <h2>Toggle</h2>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">State</span>
+    <app-toggle label="off" [isChecked]="false"></app-toggle>
+    <app-toggle label="on" [isChecked]="true"></app-toggle>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Badge</span>
+    <app-toggle label="notifications" [isChecked]="true" [badge]="3"></app-toggle>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Tooltip</span>
+    <app-toggle label="hover me" tooltip="Enable notifications"></app-toggle>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Focus glow</span>
+    <app-toggle label="glow" [isChecked]="true"></app-toggle>
+    <app-toggle label="no glow" [isChecked]="true" [hasFocusGlow]="false"></app-toggle>
+  </div>
+</section>
+
 <router-outlet/>
