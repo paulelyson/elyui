@@ -23,6 +23,10 @@
   height: 0;
 }
 
+.switch input:focus {
+  outline: none;
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -53,7 +57,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--color-bg-primary-active);
+  box-shadow: 0 0 4px 2px var(--color-bg-primary-active);
 }
 
 .switch.no-focus-glow input:focus + .slider {
