@@ -27,6 +27,8 @@
 
   /* Text colors */
   --color-text: #1a1b1f;
+  --color-text-white: #e3e2e6;
+  --color-text-gray-light: #adb5bd;
   --color-text-primary-default: #539364;
   --color-text-accent-default: #2563eb;
   --color-text-success-default: #539364;

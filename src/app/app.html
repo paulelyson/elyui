@@ -60,4 +60,42 @@
   </div>
 </section>
 
+<section class="icon-overview">
+  <h2>Button</h2>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Sizes</span>
+    <app-button size="xs" variant="primary">xs</app-button>
+    <app-button size="sm" variant="primary">sm</app-button>
+    <app-button size="md" variant="primary">md</app-button>
+    <app-button size="lg" variant="primary">lg</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Variants</span>
+    <app-button variant="primary">primary</app-button>
+    <app-button variant="accent">accent</app-button>
+    <app-button variant="success">success</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Appearance</span>
+    <app-button appearance="filled" variant="accent">filled</app-button>
+    <app-button appearance="ghost">ghost</app-button>
+    <app-button appearance="link" variant="primary">link</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">With icon</span>
+    <app-button variant="primary" icon="star">favorite</app-button>
+    <app-button variant="warning" icon="star">favorite</app-button>
+
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Disabled</span>
+    <app-button variant="primary" [disabled]="true">disabled</app-button>
+  </div>
+</section>
+
 <router-outlet/>

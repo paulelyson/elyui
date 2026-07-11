@@ -1,0 +1,108 @@
+.btn-custom {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+  background-color: transparent;
+  font-weight: 550;
+  font-family: 'Poppins';
+}
+
+.btn-custom.primary {
+  border: none;
+  background: var(--color-bg-primary-idle);
+  color: var(--color-text-primary-default);
+}
+
+.btn-custom.secondary {
+  border: none;
+  background: var(--secondary);
+  color: var(--text);
+}
+
+.btn-custom.accent {
+  border: none;
+  background: var(--color-bg-accent-idle);
+  color: var(--color-text-accent-default);
+}
+
+.btn-custom.secondary.light {
+  border: none;
+  background: var(--secondary-100);
+  color: var(--text);
+}
+
+.btn-custom.success {
+  border: 2px solid var(--color-border-success-idle);
+  background: var(--color-bg-success-idle);
+  color: var(--color-text-success-default);
+}
+
+.btn-custom:disabled,
+.btn-custom[disabled] {
+  border: none;
+  background: var(--color-bg-gray-idle);
+  color: var(--color-text-gray-light);
+}
+
+/* appearance */
+.btn-custom.link {
+  border: none;
+  background: transparent;
+}
+
+.btn-custom.link:hover {
+  text-decoration: underline;
+  font-weight: 550;
+}
+
+.btn-custom.filled.accent {
+  background-color: var(--color-bg-accent-idle);
+  border: 2px solid var(--color-border-accent-idle);
+}
+
+.btn-custom.ghost {
+  border: 2px solid var(--color-text-white);
+  background: transparent;
+  color: var(--color-text-white);
+}
+
+/*
+* Sizes
+*/
+.btn-custom.xs {
+  padding: var(--padding-xs);
+  border-radius: var(--border-radius-xs);
+  gap: var(--gap-xs);
+  line-height: var(--font-size-xs);
+  font-size: var(--font-size-xs);
+}
+
+.btn-custom.sm {
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius-sm);
+  gap: var(--gap-sm);
+  line-height: var(--font-size-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn-custom.md {
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-md);
+  gap: var(--gap-md);
+  line-height: var(--font-size-md);
+  font-size: var(--font-size-md);
+}
+
+.btn-custom.lg {
+  padding: var(--padding-lg);
+  border-radius: var(--border-radius-lg);
+  gap: var(--gap-lg);
+  line-height: var(--font-size-lg);
+  font-size: var(--font-size-lg);
+}
+
+.btn-custom.width-filled {
+  width: 100%;
+}
