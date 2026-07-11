@@ -9,6 +9,19 @@ This project is an Angular custom component library distributed via npm (shadcn/
 
 Some components are still lacking or underdeveloped. Thats is expected and acceptable — **the priority is to copy ALL components over first, as-is. Enhancement comes later.** Do not refactor, "improve", or restructure a component during the copy phase unless explicitly instructed.
 
+## Design Philosophy
+
+The components are **Angular Material under the hood, dressed in custom minimalist CSS**. Material provides the behavior (a11y, keyboard handling, overlays, CVA plumbing); the library strips its visual identity and replaces it with a clean, minimal skin.
+
+Guiding principles:
+
+1. **Minimalistic look.** Remove Material's ripple effect, default backgrounds, and visual ornamentation. Flat and clean by default.
+2. **Theming via CSS variables only.** Primary, accent, and other theme colors must be overridable by simply updating CSS variables (e.g. `--color-primary-*`, `--color-accent-*`) — no rebuilds, no Material theming API required by consumers.
+3. **Full control over focus glow.** The focus glow/ring is configurable — components must expose a way to disable it (e.g. an input), never hard-force it.
+4. **DX first.** Using a component should be ONE line of HTML with sensible defaults — e.g. `<app-autocomplete [options]="opts" />` instead of the mountain of markup raw Material autocomplete requires. Verbosity lives inside the library, never in the consumer's template.
+
+When enhancing components (post-copy phase), these principles decide what "done" looks like. During migration, they inform the per-component decision of how much Material to keep: keep the behavior, strip the skin.
+
 ## Migration Workflow — STRICT RULES
 
 The migration is done **one component at a time, only on my explicit go signal**:

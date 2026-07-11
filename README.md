@@ -1,59 +1,44 @@
-# Elyui
+# elyui
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.18.
+A minimalist Angular component library — **Angular Material under the hood, dressed in clean custom CSS**.
 
-## Development server
+## The Goal
 
-To start a local development server, run:
+Angular Material is powerful, but its defaults are opinionated (ripples, elevated backgrounds, heavy visual identity) and its usage is verbose. elyui keeps what Material does best — accessibility, keyboard handling, overlays, form-control plumbing — and replaces everything you *see* with a minimal, flat, easily themeable skin.
 
-```bash
-ng serve
-```
+### Principles
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Minimalistic by default.** No ripple. No default backgrounds. No visual noise. Just clean, flat components.
+- **Theme with CSS variables.** Override primary, accent, and semantic colors by updating CSS variables — no Material theming API, no rebuild:
 
-## Code scaffolding
+  ```css
+  :root {
+    --color-primary-500: #6d28d9;
+    --color-accent-500: #f59e0b;
+  }
+  ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **You control the focus glow.** The focus ring/glow can be disabled per component — it's your call, not the library's.
+- **DX first: one line of HTML.** The verbosity lives inside the library, not in your templates.
 
-```bash
-ng generate component component-name
-```
+  ```html
+  <!-- elyui -->
+  <app-autocomplete [options]="options" />
+  ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+  versus the raw Material equivalent: a `mat-form-field`, a `mat-label`, an `input` with `matAutocomplete`, a `mat-autocomplete` panel, a `@for` of `mat-option`s, plus the filtering pipeline in your component class — every single time.
 
-```bash
-ng generate --help
-```
+## Status
 
-## Building
+The library is being populated by migrating components from an existing production Angular app, one component at a time. Components arrive as-is first; refinement toward the principles above comes after.
 
-To build the project run:
+## Development
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Requires Angular 21+.
 
 ```bash
-ng test
+npm install     # install dependencies
+ng serve        # dev server at http://localhost:4200
+ng build        # build to dist/
+ng test         # unit tests (Vitest)
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
