@@ -15,6 +15,14 @@
   --color-text-warning-default: #ea580c;
   --color-text-danger-default: #b91c1c;
 
+  /* Border colors */
+  --color-border-gray-idle: #ced4da;
+  --color-border-primary-idle: #6db681;
+  --color-border-accent-idle: #60a5fa;
+  --color-border-success-idle: #6db681;
+  --color-border-warning-idle: #fb923c;
+  --color-border-danger-idle: #f87171;
+
   /* Background colors */
   --color-bg-gray-idle: #e7ecf3;
   --color-bg-primary-idle: #cbe7ce;

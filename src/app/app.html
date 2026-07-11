@@ -52,6 +52,12 @@
     <app-badge variant="primary" [hasBadgeIcon]="true">info</app-badge>
     <app-badge variant="danger" [hasCloseIcon]="true">closable</app-badge>
   </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Border</span>
+    <app-badge variant="primary">bordered</app-badge>
+    <app-badge variant="primary" [hasBorder]="false">seamless</app-badge>
+  </div>
 </section>
 
 <router-outlet/>

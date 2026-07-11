@@ -1,4 +1,9 @@
-<div class="badge-container" [ngClass]="[size, variant]" [class.clickable]="clickable">
+<div
+  class="badge-container"
+  [ngClass]="[size, variant]"
+  [class.clickable]="clickable"
+  [class.borderless]="!hasBorder"
+>
   @if (hasBadgeIcon) {
     <app-icon name="info" [size]="size"/>
   }

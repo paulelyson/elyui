@@ -14,6 +14,7 @@ export class Badge {
   @Input() variant: Variant = 'neutral';
   @Input() hasBadgeIcon: boolean = false;
   @Input() hasCloseIcon: boolean = false;
+  @Input() hasBorder: boolean = true;
   @Input() clickable: boolean = true;
   @Output() closed: EventEmitter<string> = new EventEmitter<string>();
 
