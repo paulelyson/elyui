@@ -14,4 +14,12 @@
   --color-text-success-default: #539364;
   --color-text-warning-default: #ea580c;
   --color-text-danger-default: #b91c1c;
+
+  /* Background colors */
+  --color-bg-gray-idle: #e7ecf3;
+  --color-bg-primary-idle: #cbe7ce;
+  --color-bg-accent-idle: #dbeafe;
+  --color-bg-success-idle: #cbe7ce;
+  --color-bg-warning-idle: #ffedd5;
+  --color-bg-danger-idle: #fce8e6;
 }

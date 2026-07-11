@@ -10,19 +10,47 @@
   </div>
 
   <div class="icon-overview__row">
-    <span class="icon-overview__label">Types</span>
-    <app-icon name="circle" type="neutral" tooltip="neutral"></app-icon>
-    <app-icon name="info" type="primary" tooltip="primary"></app-icon>
-    <app-icon name="bookmark" type="accent" tooltip="accent"></app-icon>
-    <app-icon name="check_circle" type="success" tooltip="success"></app-icon>
-    <app-icon name="warning" type="warning" tooltip="warning"></app-icon>
-    <app-icon name="error" type="danger" tooltip="danger"></app-icon>
+    <span class="icon-overview__label">variants</span>
+    <app-icon name="circle" variant="neutral" tooltip="neutral"></app-icon>
+    <app-icon name="info" variant="primary" tooltip="primary"></app-icon>
+    <app-icon name="bookmark" variant="accent" tooltip="accent"></app-icon>
+    <app-icon name="check_circle" variant="success" tooltip="success"></app-icon>
+    <app-icon name="warning" variant="warning" tooltip="warning"></app-icon>
+    <app-icon name="error" variant="danger" tooltip="danger"></app-icon>
   </div>
 
   <div class="icon-overview__row">
     <span class="icon-overview__label">Clickable</span>
     <app-icon name="favorite" [clickable]="true" tooltip="clickable"></app-icon>
     <app-icon name="lock" [clickable]="false" tooltip="not clickable"></app-icon>
+  </div>
+</section>
+
+<section class="icon-overview">
+  <h2>Badge</h2>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Sizes</span>
+    <app-badge size="xs" variant="primary">xs</app-badge>
+    <app-badge size="sm" variant="primary">sm</app-badge>
+    <app-badge size="md" variant="primary">md</app-badge>
+    <app-badge size="lg" variant="primary">lg</app-badge>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">variant</span>
+    <app-badge variant="neutral">neutral</app-badge>
+    <app-badge variant="primary">primary</app-badge>
+    <app-badge variant="accent">accent</app-badge>
+    <app-badge variant="success">success</app-badge>
+    <app-badge variant="warning">warning</app-badge>
+    <app-badge variant="danger">danger</app-badge>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">With icons</span>
+    <app-badge variant="primary" [hasBadgeIcon]="true">info</app-badge>
+    <app-badge variant="danger" [hasCloseIcon]="true">closable</app-badge>
   </div>
 </section>
 

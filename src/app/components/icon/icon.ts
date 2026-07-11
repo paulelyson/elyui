@@ -13,7 +13,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 export class Icon {
   @Input() name: string = 'info';
   @Input() size: Size = 'sm';
-  @Input() type: Variant = 'primary';
+  @Input() variant: Variant = 'primary';
   @Input() tooltip: string = '';
   @Input() clickable: boolean = true;
   @Output() iconclicked: EventEmitter<string> = new EventEmitter<string>();
