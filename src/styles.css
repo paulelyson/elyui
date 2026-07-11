@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  /* Font sizes */
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+
+  /* Text colors */
+  --color-text: #1a1b1f;
+  --color-text-primary-default: #539364;
+  --color-text-accent-default: #2563eb;
+  --color-text-success-default: #539364;
+  --color-text-warning-default: #ea580c;
+  --color-text-danger-default: #b91c1c;
+}
