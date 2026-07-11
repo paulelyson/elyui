@@ -9,7 +9,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
-  border-radius: 12px;
   font-weight: 550;
 }
 
@@ -57,28 +56,32 @@
 
 /* Size: xs */
 .badge-container.xs {
-  padding: 4px 6px;
+  padding: var(--padding-xs);
+  border-radius: var(--border-radius-xs);
   line-height: var(--font-size-xs);
   font-size: var(--font-size-xs);
 }
 
 /* Size: sm */
 .badge-container.sm {
-  padding: 4px 8px;
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius-sm);
   line-height: var(--font-size-sm);
   font-size: var(--font-size-sm);
 }
 
 /* Size: md */
 .badge-container.md {
-  padding: 4px 8px;
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-md);
   line-height: var(--font-size-md);
   font-size: var(--font-size-md);
 }
 
 /* Size: lg */
 .badge-container.lg {
-  padding: 4px 10px;
+  padding: var(--padding-lg);
+  border-radius: var(--border-radius-lg);
   line-height: var(--font-size-lg);
   font-size: var(--font-size-lg);
 }

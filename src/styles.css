@@ -7,6 +7,18 @@
   --font-size-md: 14px;
   --font-size-lg: 16px;
 
+  /* Padding */
+  --padding-xs: 2px 6px;
+  --padding-sm: 4px 8px;
+  --padding-md: 6px 10px;
+  --padding-lg: 8px 12px;
+
+  /* Border radius */
+  --border-radius-xs: 8px;
+  --border-radius-sm: 10px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 14px;
+
   /* Text colors */
   --color-text: #1a1b1f;
   --color-text-primary-default: #539364;
