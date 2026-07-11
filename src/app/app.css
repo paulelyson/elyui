@@ -1,0 +1,16 @@
+.icon-overview {
+  padding: 1.5rem;
+}
+
+.icon-overview__row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon-overview__label {
+  width: 6rem;
+  font-size: 0.875rem;
+  color: #666;
+}

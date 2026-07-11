@@ -1,2 +1,27 @@
-<app-icon></app-icon>
+<section class="icon-overview">
+  <h2>Icon</h2>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Sizes</span>
+    <app-icon name="star" size="xs" tooltip="xs"></app-icon>
+    <app-icon name="star" size="sm" tooltip="sm"></app-icon>
+    <app-icon name="star" size="md" tooltip="md"></app-icon>
+    <app-icon name="star" size="lg" tooltip="lg"></app-icon>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Types</span>
+    <app-icon name="info" type="primary" tooltip="primary"></app-icon>
+    <app-icon name="check_circle" type="success" tooltip="success"></app-icon>
+    <app-icon name="warning" type="warning" tooltip="warning"></app-icon>
+    <app-icon name="error" type="danger" tooltip="danger"></app-icon>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Clickable</span>
+    <app-icon name="favorite" [clickable]="true" tooltip="clickable"></app-icon>
+    <app-icon name="lock" [clickable]="false" tooltip="not clickable"></app-icon>
+  </div>
+</section>
+
 <router-outlet/>
