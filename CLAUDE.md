@@ -22,6 +22,18 @@ Guiding principles:
 
 When enhancing components (post-copy phase), these principles decide what "done" looks like. During migration, they inform the per-component decision of how much Material to keep: keep the behavior, strip the skin.
 
+### Reference standard: Badge
+
+`src/app/components/badge/` is the reference implementation for how a fully-tokenized component should look. When enhancing any component's CSS (post-copy phase), follow its pattern:
+
+- **No hardcoded pixel values for anything that scales with `size`** — padding, border-radius, gap, and font-size must all come from a `--<property>-xs/sm/md/lg` CSS variable, defined once in `src/styles.css` and referenced per size class (see `--padding-*`, `--border-radius-*`, `--gap-*`, `--font-size-*`).
+- **No hardcoded colors** — background, text, and border colors come from semantic `--color-bg-*`, `--color-text-*`, `--color-border-*` variables, never literal hex/rgb in a component's `.css` file.
+- **Fixed structural values stay hardcoded** — e.g. badge's `min-width: 40px` is a layout constraint, not a design token, so it is not tokenized. Only values that should scale with `size` or vary with `variant`/theme get promoted to a variable.
+- When adding a new size-scalable property to any component, add the corresponding `--<property>-xs/sm/md/lg` variables to `src/styles.css` rather than inlining a pixel value.
+- Every component gets a `hasBorder`-style boolean input (default `true`) if it has a border, so consumers can opt into a seamless/borderless look — mirrors badge's `hasBorder`.
+
+When migrating or enhancing a component, check its CSS against this standard and update accordingly: no leftover hardcoded pixels or colors for anything size- or theme-dependent.
+
 ## Migration Workflow — STRICT RULES
 
 The migration is done **one component at a time, only on my explicit go signal**:

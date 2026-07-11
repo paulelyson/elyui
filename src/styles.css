@@ -19,6 +19,12 @@
   --border-radius-md: 12px;
   --border-radius-lg: 14px;
 
+  /* Gap */
+  --gap-xs: 2px;
+  --gap-sm: 4px;
+  --gap-md: 6px;
+  --gap-lg: 8px;
+
   /* Text colors */
   --color-text: #1a1b1f;
   --color-text-primary-default: #539364;

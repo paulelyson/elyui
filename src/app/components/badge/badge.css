@@ -3,7 +3,6 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
 
   white-space: nowrap;
   overflow: hidden;
@@ -58,6 +57,7 @@
 .badge-container.xs {
   padding: var(--padding-xs);
   border-radius: var(--border-radius-xs);
+  gap: var(--gap-xs);
   line-height: var(--font-size-xs);
   font-size: var(--font-size-xs);
 }
@@ -66,6 +66,7 @@
 .badge-container.sm {
   padding: var(--padding-sm);
   border-radius: var(--border-radius-sm);
+  gap: var(--gap-sm);
   line-height: var(--font-size-sm);
   font-size: var(--font-size-sm);
 }
@@ -74,6 +75,7 @@
 .badge-container.md {
   padding: var(--padding-md);
   border-radius: var(--border-radius-md);
+  gap: var(--gap-md);
   line-height: var(--font-size-md);
   font-size: var(--font-size-md);
 }
@@ -82,6 +84,7 @@
 .badge-container.lg {
   padding: var(--padding-lg);
   border-radius: var(--border-radius-lg);
+  gap: var(--gap-lg);
   line-height: var(--font-size-lg);
   font-size: var(--font-size-lg);
 }
