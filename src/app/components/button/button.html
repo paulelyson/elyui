@@ -2,12 +2,14 @@
   [type]="type"
   class="btn-custom"
   [ngClass]="[appearance, shade, size, width, variant]"
+  [class.borderless]="!hasBorder"
+  [class.radiusless]="!hasRadius"
   (click)="onClicked()"
   [disabled]="disabled"
   [matTooltip]="tooltip"
 >
   @if (icon) {
-    <app-icon [name]="icon" [size]="size"></app-icon>
+    <app-icon [name]="icon" [size]="size" [variant]="variant"></app-icon>
   }
   <ng-content></ng-content>
 </button>

@@ -23,6 +23,8 @@ export class Button {
   @Input() icon: string = '';
   @Input() tooltip: string = '';
   @Input() disabled: boolean = false;
+  @Input() hasBorder: boolean = true;
+  @Input() hasRadius: boolean = true;
   @Output() btnclicked: EventEmitter<string> = new EventEmitter<string>();
 
   onClicked(): void {

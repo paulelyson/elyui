@@ -72,29 +72,94 @@
   </div>
 
   <div class="icon-overview__row">
-    <span class="icon-overview__label">Variants</span>
-    <app-button variant="primary">primary</app-button>
-    <app-button variant="accent">accent</app-button>
-    <app-button variant="success">success</app-button>
+    <span class="icon-overview__label">Filled</span>
+    <app-button appearance="filled" variant="neutral">neutral</app-button>
+    <app-button appearance="filled" variant="primary">primary</app-button>
+    <app-button appearance="filled" variant="accent">accent</app-button>
+    <app-button appearance="filled" variant="success">success</app-button>
+    <app-button appearance="filled" variant="warning">warning</app-button>
+    <app-button appearance="filled" variant="danger">danger</app-button>
   </div>
 
   <div class="icon-overview__row">
-    <span class="icon-overview__label">Appearance</span>
-    <app-button appearance="filled" variant="accent">filled</app-button>
-    <app-button appearance="ghost">ghost</app-button>
-    <app-button appearance="link" variant="primary">link</app-button>
+    <span class="icon-overview__label">Tonal</span>
+    <app-button appearance="tonal" variant="neutral">neutral</app-button>
+    <app-button appearance="tonal" variant="primary">primary</app-button>
+    <app-button appearance="tonal" variant="accent">accent</app-button>
+    <app-button appearance="tonal" variant="success">success</app-button>
+    <app-button appearance="tonal" variant="warning">warning</app-button>
+    <app-button appearance="tonal" variant="danger">danger</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Outlined</span>
+    <app-button appearance="outlined" variant="neutral">neutral</app-button>
+    <app-button appearance="outlined" variant="primary">primary</app-button>
+    <app-button appearance="outlined" variant="accent">accent</app-button>
+    <app-button appearance="outlined" variant="success">success</app-button>
+    <app-button appearance="outlined" variant="warning">warning</app-button>
+    <app-button appearance="outlined" variant="danger">danger</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Ghost</span>
+    <app-button appearance="ghost" variant="neutral">neutral</app-button>
+    <app-button appearance="ghost" variant="primary">primary</app-button>
+    <app-button appearance="ghost" variant="accent">accent</app-button>
+    <app-button appearance="ghost" variant="success">success</app-button>
+    <app-button appearance="ghost" variant="warning">warning</app-button>
+    <app-button appearance="ghost" variant="danger">danger</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Link</span>
+    <app-button appearance="link" variant="neutral">neutral</app-button>
+    <app-button appearance="link" variant="primary">primary</app-button>
+    <app-button appearance="link" variant="accent">accent</app-button>
+    <app-button appearance="link" variant="success">success</app-button>
+    <app-button appearance="link" variant="warning">warning</app-button>
+    <app-button appearance="link" variant="danger">danger</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Icon only</span>
+    <app-button appearance="icon" variant="neutral" icon="home"></app-button>
+    <app-button appearance="icon" variant="primary" icon="star"></app-button>
+    <app-button appearance="icon" variant="accent" icon="bookmark"></app-button>
+    <app-button appearance="icon" variant="success" icon="check"></app-button>
+    <app-button appearance="icon" variant="warning" icon="warning"></app-button>
+    <app-button appearance="icon" variant="danger" icon="delete"></app-button>
   </div>
 
   <div class="icon-overview__row">
     <span class="icon-overview__label">With icon</span>
-    <app-button variant="primary" icon="star">favorite</app-button>
-    <app-button variant="warning" icon="star">favorite</app-button>
+    <app-button appearance="tonal" variant="primary" icon="star">favorite</app-button>
+    <app-button appearance="outlined" variant="warning" icon="star">favorite</app-button>
+  </div>
 
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Border</span>
+    <app-button appearance="tonal" variant="primary">bordered</app-button>
+    <app-button appearance="tonal" variant="primary" [hasBorder]="false">seamless</app-button>
+    <app-button appearance="outlined" variant="danger">bordered</app-button>
+    <app-button appearance="outlined" variant="danger" [hasBorder]="false">seamless</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Radius</span>
+    <app-button appearance="filled" variant="primary">rounded</app-button>
+    <app-button appearance="filled" variant="primary" [hasRadius]="false">square</app-button>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Width</span>
+    <app-button appearance="filled" variant="primary" width="width-filled">full width</app-button>
   </div>
 
   <div class="icon-overview__row">
     <span class="icon-overview__label">Disabled</span>
-    <app-button variant="primary" [disabled]="true">disabled</app-button>
+    <app-button appearance="filled" variant="primary" [disabled]="true">disabled</app-button>
+    <app-button appearance="outlined" variant="primary" [disabled]="true">disabled</app-button>
   </div>
 </section>
 

@@ -4,27 +4,56 @@
   align-items: center;
   cursor: pointer;
   transition: 0.5s ease;
-  background-color: transparent;
   font-weight: 550;
   font-family: 'Poppins';
+  border: 1px solid transparent;
+}
+
+/* ================================
+  Variants (expose --btn-bg / --btn-border / --btn-fg
+  for the appearance rules below to consume)
+  ================================ */
+.btn-custom.neutral {
+  --btn-bg: var(--color-bg-gray-idle);
+  --btn-border: var(--color-border-gray-idle);
+  --btn-fg: var(--color-text);
 }
 
 .btn-custom.primary {
-  border: none;
-  background: var(--color-bg-primary-idle);
-  color: var(--color-text-primary-default);
+  --btn-bg: var(--color-bg-primary-idle);
+  --btn-border: var(--color-border-primary-idle);
+  --btn-fg: var(--color-text-primary-default);
 }
 
+.btn-custom.accent {
+  --btn-bg: var(--color-bg-accent-idle);
+  --btn-border: var(--color-border-accent-idle);
+  --btn-fg: var(--color-text-accent-default);
+}
+
+.btn-custom.success {
+  --btn-bg: var(--color-bg-success-idle);
+  --btn-border: var(--color-border-success-idle);
+  --btn-fg: var(--color-text-success-default);
+}
+
+.btn-custom.warning {
+  --btn-bg: var(--color-bg-warning-idle);
+  --btn-border: var(--color-border-warning-idle);
+  --btn-fg: var(--color-text-warning-default);
+}
+
+.btn-custom.danger {
+  --btn-bg: var(--color-bg-danger-idle);
+  --btn-border: var(--color-border-danger-idle);
+  --btn-fg: var(--color-text-danger-default);
+}
+
+/* Unreachable via the Variant type (kept inert, not part of the shared token system) */
 .btn-custom.secondary {
   border: none;
   background: var(--secondary);
   color: var(--text);
-}
-
-.btn-custom.accent {
-  border: none;
-  background: var(--color-bg-accent-idle);
-  color: var(--color-text-accent-default);
 }
 
 .btn-custom.secondary.light {
@@ -33,39 +62,60 @@
   color: var(--text);
 }
 
-.btn-custom.success {
-  border: 2px solid var(--color-border-success-idle);
-  background: var(--color-bg-success-idle);
-  color: var(--color-text-success-default);
+/* ================================
+  Appearances (generic — read the --btn-* custom
+  properties set by the variant classes above)
+  ================================ */
+
+/* Tonal: soft background + colored border, badge-like look */
+.btn-custom.tonal {
+  background: var(--btn-bg);
+  border-color: var(--btn-border);
+  color: var(--btn-fg);
 }
 
-.btn-custom:disabled,
-.btn-custom[disabled] {
-  border: none;
-  background: var(--color-bg-gray-idle);
-  color: var(--color-text-gray-light);
-}
-
-/* appearance */
-.btn-custom.link {
-  border: none;
+/* Outlined: transparent background, colored border */
+.btn-custom.outlined {
   background: transparent;
+  border-color: var(--btn-border);
+  color: var(--btn-fg);
 }
 
-.btn-custom.link:hover {
-  text-decoration: underline;
-  font-weight: 550;
-}
-
-.btn-custom.filled.accent {
-  background-color: var(--color-bg-accent-idle);
-  border: 2px solid var(--color-border-accent-idle);
-}
-
-.btn-custom.ghost {
-  border: 2px solid var(--color-text-white);
-  background: transparent;
+/* Filled: solid, high-contrast background */
+.btn-custom.filled {
+  background: var(--btn-fg);
+  border-color: transparent;
   color: var(--color-text-white);
+}
+
+/* Ghost: transparent until hovered */
+.btn-custom.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--btn-fg);
+}
+
+.btn-custom.ghost:hover:not(:disabled) {
+  background: var(--btn-bg);
+}
+
+/* Link: text-only, underline on hover */
+.btn-custom.link {
+  background: transparent;
+  border-color: transparent;
+  color: var(--btn-fg);
+}
+
+.btn-custom.link:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+/* Icon: transparent, icon-only compact button */
+.btn-custom.icon {
+  background: transparent;
+  border-color: transparent;
+  color: var(--btn-fg);
+  aspect-ratio: 1/1;
 }
 
 /*
@@ -103,6 +153,45 @@
   font-size: var(--font-size-lg);
 }
 
+/* Icon-only buttons get equal padding on all sides instead of the
+   horizontally-biased text padding */
+.btn-custom.icon.xs {
+  padding: var(--gap-xs);
+}
+
+.btn-custom.icon.sm {
+  padding: var(--gap-sm);
+}
+
+.btn-custom.icon.md {
+  padding: var(--gap-md);
+}
+
+.btn-custom.icon.lg {
+  padding: var(--gap-lg);
+}
+
 .btn-custom.width-filled {
   width: 100%;
+}
+
+/* ================================
+  Full design control
+  Placed after sizes/appearances so it wins the same-specificity
+  cascade tie against .xs/.sm/.md/.lg and .tonal/.outlined border rules
+  ================================ */
+.btn-custom.borderless {
+  border-color: transparent;
+}
+
+.btn-custom.radiusless {
+  border-radius: 0;
+}
+
+.btn-custom:disabled,
+.btn-custom[disabled] {
+  cursor: not-allowed;
+  background: var(--color-bg-gray-idle);
+  border-color: transparent;
+  color: var(--color-text-gray-light);
 }
