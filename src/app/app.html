@@ -207,4 +207,53 @@
   </div>
 </section>
 
+<section class="icon-overview">
+  <h2>Segmented Control</h2>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Paper size</span>
+    <app-segmented-control [options]="paperSizeOptions" value="A4"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Orientation</span>
+    <app-segmented-control [options]="orientationOptions" value="portrait"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Variants</span>
+    <app-segmented-control [options]="orientationOptions" value="portrait" variant="primary"></app-segmented-control>
+    <app-segmented-control [options]="orientationOptions" value="portrait" variant="success"></app-segmented-control>
+    <app-segmented-control [options]="orientationOptions" value="portrait" variant="danger"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Sizes</span>
+    <app-segmented-control [options]="orientationOptions" value="portrait" size="xs"></app-segmented-control>
+    <app-segmented-control [options]="orientationOptions" value="portrait" size="lg"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Border</span>
+    <app-segmented-control [options]="orientationOptions" value="portrait"></app-segmented-control>
+    <app-segmented-control [options]="orientationOptions" value="portrait" [hasBorder]="false"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Radius</span>
+    <app-segmented-control [options]="orientationOptions" value="portrait"></app-segmented-control>
+    <app-segmented-control [options]="orientationOptions" value="portrait" [hasRadius]="false"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Disabled</span>
+    <app-segmented-control [options]="orientationOptions" value="portrait" [disabled]="true"></app-segmented-control>
+  </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Multiple</span>
+    <app-segmented-control [options]="paperSizeOptions" [multiple]="true" [value]="['A4', 'LETTER']"></app-segmented-control>
+  </div>
+</section>
+
 <router-outlet/>

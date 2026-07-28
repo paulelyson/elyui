@@ -1,0 +1,24 @@
+<div
+  class="segmented-control"
+  [ngClass]="[size, variant]"
+  [class.borderless]="!hasBorder"
+  [class.radiusless]="!hasRadius"
+  [class.vertical]="vertical"
+  role="group"
+>
+  @for (option of options; track option.value) {
+    <button
+      type="button"
+      class="segmented-control__option"
+      [class.active]="isSelected(option.value)"
+      [disabled]="disabled || option.disabled"
+      [attr.aria-pressed]="isSelected(option.value)"
+      (click)="onOptionClick(option.value)"
+    >
+      @if (option.icon) {
+        <app-icon [name]="option.icon" [size]="size" variant="neutral" [clickable]="false" />
+      }
+      {{ option.label }}
+    </button>
+  }
+</div>

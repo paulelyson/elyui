@@ -1,0 +1,108 @@
+.segmented-control {
+  display: inline-flex;
+  gap: var(--gap-sm);
+}
+
+.segmented-control.vertical {
+  flex-direction: column;
+}
+
+.segmented-control__option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  cursor: pointer;
+  border: 1px solid var(--color-border-gray-idle);
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 500;
+  font-family: inherit;
+  transition: 0.2s ease;
+}
+
+.segmented-control__option:disabled {
+  cursor: not-allowed;
+  background: var(--color-bg-gray-idle);
+  color: var(--color-text-gray-light);
+  border-color: transparent;
+}
+
+/* Variants: expose --seg-bg/--seg-border/--seg-fg for the active state to consume */
+.segmented-control.neutral {
+  --seg-bg: var(--color-bg-gray-idle);
+  --seg-border: var(--color-border-gray-idle);
+  --seg-fg: var(--color-text);
+}
+
+.segmented-control.primary {
+  --seg-bg: var(--color-bg-primary-idle);
+  --seg-border: var(--color-border-primary-idle);
+  --seg-fg: var(--color-text-primary-default);
+}
+
+.segmented-control.accent {
+  --seg-bg: var(--color-bg-accent-idle);
+  --seg-border: var(--color-border-accent-idle);
+  --seg-fg: var(--color-text-accent-default);
+}
+
+.segmented-control.success {
+  --seg-bg: var(--color-bg-success-idle);
+  --seg-border: var(--color-border-success-idle);
+  --seg-fg: var(--color-text-success-default);
+}
+
+.segmented-control.warning {
+  --seg-bg: var(--color-bg-warning-idle);
+  --seg-border: var(--color-border-warning-idle);
+  --seg-fg: var(--color-text-warning-default);
+}
+
+.segmented-control.danger {
+  --seg-bg: var(--color-bg-danger-idle);
+  --seg-border: var(--color-border-danger-idle);
+  --seg-fg: var(--color-text-danger-default);
+}
+
+.segmented-control__option.active {
+  background: var(--seg-bg);
+  border-color: var(--seg-border);
+  color: var(--seg-fg);
+}
+
+/*
+* Sizes
+*/
+.segmented-control.xs .segmented-control__option {
+  padding: var(--padding-xs);
+  border-radius: var(--border-radius-xs);
+  font-size: var(--font-size-xs);
+}
+
+.segmented-control.sm .segmented-control__option {
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.segmented-control.md .segmented-control__option {
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+}
+
+.segmented-control.lg .segmented-control__option {
+  padding: var(--padding-lg);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-lg);
+}
+
+/* Full design control. Placed after sizes so it wins the same-specificity
+   cascade tie against .xs/.sm/.md/.lg's border-radius. */
+.segmented-control.borderless .segmented-control__option {
+  border-color: transparent;
+}
+
+.segmented-control.radiusless .segmented-control__option {
+  border-radius: 0;
+}
