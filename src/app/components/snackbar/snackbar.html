@@ -1,4 +1,4 @@
-<div class="snackbar-container" [ngClass]="config.type">
+<div class="snackbar-container" [ngClass]="config.type" [class.borderless]="!hasBorder">
   <div class="snackbar-wrapper">
     <div class="icon-wrapper" [class.hasHeader]="hasHeader">
       <app-icon name="info" size="md" [variant]="iconVariant" />

@@ -18,11 +18,12 @@ export class App {
 
   constructor(private snackbarService: SnackbarService) {}
 
-  showSnackbar(type: ISnackBarConfig['type']): void {
+  showSnackbar(type: ISnackBarConfig['type'], hasBorder: boolean = true): void {
     this.snackbarService.openSnackbar({
       type,
       message: [`This is a ${type} snackbar message.`],
       icon: 'info',
+      hasBorder,
     });
   }
 }

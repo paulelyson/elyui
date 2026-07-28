@@ -13,6 +13,7 @@ export interface ISnackBarConfig {
   action?: string[];
   icon: string;
   duration?: number;
+  hasBorder?: boolean;
 }
 
 @Component({
@@ -43,5 +44,9 @@ export class Snackbar {
       default:
         return this.config.type;
     }
+  }
+
+  get hasBorder(): boolean {
+    return this.config.hasBorder ?? true;
   }
 }

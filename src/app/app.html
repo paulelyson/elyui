@@ -199,6 +199,12 @@
     <app-button appearance="tonal" variant="warning" (btnclicked)="showSnackbar('warning')">warning</app-button>
     <app-button appearance="tonal" variant="danger" (btnclicked)="showSnackbar('error')">error</app-button>
   </div>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Border</span>
+    <app-button appearance="tonal" variant="primary" (btnclicked)="showSnackbar('primary', true)">bordered</app-button>
+    <app-button appearance="tonal" variant="primary" (btnclicked)="showSnackbar('primary', false)">seamless</app-button>
+  </div>
 </section>
 
 <router-outlet/>
