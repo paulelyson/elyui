@@ -189,4 +189,16 @@
   </div>
 </section>
 
+<section class="icon-overview">
+  <h2>Snackbar</h2>
+
+  <div class="icon-overview__row">
+    <span class="icon-overview__label">Variants</span>
+    <app-button appearance="tonal" variant="primary" (btnclicked)="showSnackbar('primary')">primary</app-button>
+    <app-button appearance="tonal" variant="success" (btnclicked)="showSnackbar('success')">success</app-button>
+    <app-button appearance="tonal" variant="warning" (btnclicked)="showSnackbar('warning')">warning</app-button>
+    <app-button appearance="tonal" variant="danger" (btnclicked)="showSnackbar('error')">error</app-button>
+  </div>
+</section>
+
 <router-outlet/>
