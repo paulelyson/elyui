@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { MAT_SNACK_BAR_DATA, MatSnackBarModule, MatSnackBarRef } from '@angular/material/snack-bar';
 import { Icon } from '../icon/icon';
-import { Variant } from '@/models/ui/common-config.model';
+import { Variant } from '../../models/ui/common-config.model';
 
 type SnackBarType = 'primary' | 'success' | 'warning' | 'error' | 'dafault';
 
@@ -17,7 +17,7 @@ export interface ISnackBarConfig {
 }
 
 @Component({
-  selector: 'app-snackbar',
+  selector: 'ely-snackbar',
   imports: [CommonModule, Icon, MatSnackBarModule],
   templateUrl: './snackbar.html',
   styleUrl: './snackbar.css',

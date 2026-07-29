@@ -4,7 +4,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-toggle',
+  selector: 'ely-toggle',
   imports: [FormsModule, MatTooltipModule, MatBadgeModule],
   templateUrl: './toggle.html',
   styleUrl: './toggle.css',

@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Icon } from '../icon/icon';
-import { Size, Variant } from '@/models/ui/common-config.model';
-import { SegmentedControlOption } from '@/models/ui/segmented-control.model';
+import { Size, Variant } from '../../models/ui/common-config.model';
+import { SegmentedControlOption } from '../../models/ui/segmented-control.model';
 
 @Component({
-  selector: 'app-segmented-control',
+  selector: 'ely-segmented-control',
   imports: [CommonModule, Icon],
   templateUrl: './segmented-control.html',
   styleUrl: './segmented-control.css',

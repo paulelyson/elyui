@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Size, Variant } from '@/models/ui/common-config.model';
+import { Size, Variant } from '../../models/ui/common-config.model';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-icon',
+  selector: 'ely-icon',
   imports: [CommonModule, MatIconModule, MatTooltipModule],
   templateUrl: './icon.html',
   styleUrl: './icon.css',

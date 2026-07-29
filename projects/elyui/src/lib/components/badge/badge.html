@@ -5,10 +5,10 @@
   [class.borderless]="!hasBorder"
 >
   @if (hasBadgeIcon) {
-    <app-icon name="info" [size]="size"/>
+    <ely-icon name="info" [size]="size"/>
   }
   <ng-content></ng-content>
   @if (hasCloseIcon) {
-    <app-icon name="close" [size]="size" [variant]="variant" (iconclicked)="onClosed()"/>
+    <ely-icon name="close" [size]="size" [variant]="variant" (iconclicked)="onClosed()"/>
   }
 </div>

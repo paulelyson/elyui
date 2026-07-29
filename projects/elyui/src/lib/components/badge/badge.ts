@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Size, Variant } from '@/models/ui/common-config.model';
+import { Size, Variant } from '../../models/ui/common-config.model';
 import { Icon } from '../icon/icon';
 
 @Component({
-  selector: 'app-badge',
+  selector: 'ely-badge',
   imports: [CommonModule, Icon],
   templateUrl: './badge.html',
   styleUrl: './badge.css',

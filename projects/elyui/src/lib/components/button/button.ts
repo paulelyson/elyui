@@ -3,11 +3,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Icon } from '../icon/icon';
-import { Size, Variant } from '@/models/ui/common-config.model';
-import { ButtonAppearance, ButtonShade, ButtonWidth } from '@/models/ui/button-config.model';
+import { Size, Variant } from '../../models/ui/common-config.model';
+import { ButtonAppearance, ButtonShade, ButtonWidth } from '../../models/ui/button-config.model';
 
 @Component({
-  selector: 'app-button',
+  selector: 'ely-button',
   imports: [CommonModule, MatIconModule, Icon, MatTooltipModule],
   templateUrl: './button.html',
   styleUrl: './button.css',
