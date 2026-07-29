@@ -5,7 +5,13 @@
 
 ## Project Overview
 
-This project is an Angular custom component library distributed via npm (shadcn/ui-style CLI model). The current objective is to **migrate custom components from the source project into this project's root/registry**, so they can be registered and published on npm.
+This project is an Angular custom component library, published to npm as `elyui` (an ng-packagr Angular Package Format library). Consumers `npm install elyui` and `import { Button } from 'elyui'`.
+
+The repo is a workspace with two projects: `projects/elyui/` is the library itself — the only thing that ships — and the root `src/` is a demo app that consumes the library exactly like an external project would (via the `elyui` path mapping in `tsconfig.json`), doubling as a living overview page for every component. The root workspace stays `"private": true` and is never published; only `projects/elyui/package.json` (`name: "elyui"`) is.
+
+A shadcn/ui-style copy-source CLI + registry was considered and is intentionally **deferred** — see `docs/registry-design.md` for the rationale and the preserved schema. Revisit only if this goes open-source and people actually ask for it.
+
+The current objective is to **migrate custom components from the source project into `projects/elyui/src/lib/`**, so they ship in the published package.
 
 Some components are still lacking or underdeveloped. Thats is expected and acceptable — **the priority is to copy ALL components over first, as-is. Enhancement comes later.** Do not refactor, "improve", or restructure a component during the copy phase unless explicitly instructed.
 
@@ -24,9 +30,9 @@ When enhancing components (post-copy phase), these principles decide what "done"
 
 ### Reference standard: Badge
 
-`src/app/components/badge/` is the reference implementation for how a fully-tokenized component should look. When enhancing any component's CSS (post-copy phase), follow its pattern:
+`projects/elyui/src/lib/components/badge/` is the reference implementation for how a fully-tokenized component should look. When enhancing any component's CSS (post-copy phase), follow its pattern:
 
-- **No hardcoded pixel values for anything that scales with `size`** — padding, border-radius, gap, and font-size must all come from a `--<property>-xs/sm/md/lg` CSS variable, defined once in `src/styles.css` and referenced per size class (see `--padding-*`, `--border-radius-*`, `--gap-*`, `--font-size-*`).
+- **No hardcoded pixel values for anything that scales with `size`** — padding, border-radius, gap, and font-size must all come from a `--<property>-xs/sm/md/lg` CSS variable, defined once in `projects/elyui/styles/elyui.css` (the shipped theme) and referenced per size class (see `--padding-*`, `--border-radius-*`, `--gap-*`, `--font-size-*`).
 - **No hardcoded colors** — background, text, and border colors come from semantic `--color-bg-*`, `--color-text-*`, `--color-border-*` variables, never literal hex/rgb in a component's `.css` file.
 - **Fixed structural values stay hardcoded** — e.g. badge's `min-width: 40px` is a layout constraint, not a design token, so it is not tokenized. Only values that should scale with `size` or vary with `variant`/theme get promoted to a variable.
 - When adding a new size-scalable property to any component, add the corresponding `--<property>-xs/sm/md/lg` variables to `src/styles.css` rather than inlining a pixel value.
@@ -57,14 +63,14 @@ When enhancement or new code IS requested, match my existing coding style. Consi
 
 - **Use `@Input()` decorators, NOT the `input()` signal function.** Only use `input()` when strictly necessary (e.g., a feature genuinely requires signal inputs). Same principle applies to `@Output()` over `output()`.
 - Always use explicit TypeScript return types on functions and methods.
-- Follow the existing patterns in already-migrated components — file naming, folder structure, import style (`@/` alias convention) — rather than introducing new conventions.
+- Follow the existing patterns in already-migrated components — file naming, folder structure, import style (relative imports within `projects/elyui/src/lib/`; the demo app imports the library via the `elyui` path mapping, same as an external consumer) — rather than introducing new conventions.
 - When in doubt about a style decision, ask me instead of guessing.
 
 ## Out of Scope (unless explicitly asked)
 
 - Do not rename components or files during migration.
 - Do not add new features to components while copying them.
-- Do not modify `global.css` / theme entries unless the task requires it.
+- Do not modify `projects/elyui/styles/elyui.css` (the shipped theme) unless the task requires it.
 - Do not run `npm publish` or any registry-publishing command. Ever. That is manual.
 - Your job is to update the codebase ONLY.
 - NEVER run the app, tests, or any shell commands to verify changes.

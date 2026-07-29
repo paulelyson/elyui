@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "ng serve demo",
+    "build": "ng build demo",
+    "watch": "ng build demo --watch --configuration development",
+    "test": "ng test demo",
+    "build:lib": "ng build elyui",
+    "pack:lib": "cd dist/elyui && npm pack"
   },
   "private": true,
   "packageManager": "npm@10.9.3",
@@ -27,6 +29,7 @@
     "@angular/cli": "^21.2.18",
     "@angular/compiler-cli": "^21.2.0",
     "jsdom": "^28.0.0",
+    "ng-packagr": "^21.2.5",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

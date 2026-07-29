@@ -1,0 +1,23 @@
+{
+  "name": "elyui",
+  "version": "0.1.0",
+  "description": "Angular Material under the hood, dressed in a clean minimalist skin. A CSS-variable-themeable component library.",
+  "license": "MIT",
+  "sideEffects": false,
+  "keywords": ["angular", "components", "ui", "material", "design-system"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulelyson/elyui.git"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "^21.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/cdk": "^21.0.0",
+    "@angular/material": "^21.0.0",
+    "rxjs": "^7.8.0"
+  }
+}

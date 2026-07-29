@@ -16,7 +16,7 @@
     "module": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/app/*"],
+      "elyui": ["./projects/elyui/src/public-api.ts"]
     }
   },
   "angularCompilerOptions": {
@@ -32,6 +32,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/elyui/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/elyui/tsconfig.spec.json"
     }
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "theme": {
+    "type": "style",
+    "files": [
+      { "path": "theme/global.css", "target": "styles/global.css" }
+    ]
+  },
+  "models": {
+    "type": "lib",
+    "files": [
+      { "path": "models/common-config.model.ts", "target": "models/ui/common-config.model.ts" }
+    ]
+  },
+  "icon": {
+    "type": "component",
+    "files": [
+      { "path": "icon/icon.ts", "target": "components/icon/icon.ts" },
+      { "path": "icon/icon.html", "target": "components/icon/icon.html" },
+      { "path": "icon/icon.css", "target": "components/icon/icon.css" }
+    ],
+    "registryDependencies": ["models"],
+    "npmDependencies": [],
+    "assets": [
+      {
+        "type": "index-html-link",
+        "tag": "<link href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined\" rel=\"stylesheet\" />"
+      }
+    ]
+  },
+  "button": {
+    "type": "component",
+    "files": [
+      { "path": "button/button.ts", "target": "components/button/button.ts" },
+      { "path": "button/button.html", "target": "components/button/button.html" },
+      { "path": "button/button.css", "target": "components/button/button.css" }
+    ],
+    "registryDependencies": ["models"],
+    "npmDependencies": []
+  }
+}

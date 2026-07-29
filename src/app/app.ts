@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Icon } from './components/icon/icon';
-import { Badge } from './components/badge/badge';
-import { Button } from './components/button/button';
-import { Toggle } from './components/toggle/toggle';
-import { ISnackBarConfig } from './components/snackbar/snackbar';
-import { SnackbarService } from './services/snackbar.service';
-import { SegmentedControl } from './components/segmented-control/segmented-control';
-import { SegmentedControlOption } from './models/ui/segmented-control.model';
+import {
+  Icon,
+  Badge,
+  Button,
+  Toggle,
+  SegmentedControl,
+  ISnackBarConfig,
+  SnackbarService,
+  SegmentedControlOption,
+} from 'elyui';
 
 @Component({
   selector: 'app-root',
