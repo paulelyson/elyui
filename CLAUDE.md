@@ -5,9 +5,9 @@
 
 ## Project Overview
 
-This project is an Angular custom component library, published to npm as `elyui` (an ng-packagr Angular Package Format library). Consumers `npm install elyui` and `import { Button } from 'elyui'`.
+This project is an Angular custom component library, published to npm as `@paulelyson/elyui` (an ng-packagr Angular Package Format library, scoped under the author's npm username because the bare `elyui` name was rejected by npm for being too similar to existing packages). Consumers `npm install @paulelyson/elyui` and `import { Button } from '@paulelyson/elyui'`.
 
-The repo is a workspace with two projects: `projects/elyui/` is the library itself — the only thing that ships — and the root `src/` is a demo app that consumes the library exactly like an external project would (via the `elyui` path mapping in `tsconfig.json`), doubling as a living overview page for every component. The root workspace stays `"private": true` and is never published; only `projects/elyui/package.json` (`name: "elyui"`) is.
+The repo is a workspace with two projects: `projects/elyui/` is the library itself — the only thing that ships — and the root `src/` is a demo app that consumes the library exactly like an external project would (via the `elyui` path mapping in `tsconfig.json`, which is just this workspace's internal dev alias and independent of the published package name), doubling as a living overview page for every component. The root workspace stays `"private": true` and is never published; only `projects/elyui/package.json` (`name: "@paulelyson/elyui"`) is.
 
 A shadcn/ui-style copy-source CLI + registry was considered and is intentionally **deferred** — see `docs/registry-design.md` for the rationale and the preserved schema. Revisit only if this goes open-source and people actually ask for it.
 

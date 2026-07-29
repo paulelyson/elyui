@@ -1,5 +1,5 @@
 {
-  "name": "elyui",
+  "name": "@paulelyson/elyui",
   "version": "0.1.0",
   "description": "Angular Material under the hood, dressed in a clean minimalist skin. A CSS-variable-themeable component library.",
   "license": "MIT",
@@ -7,7 +7,7 @@
   "keywords": ["angular", "components", "ui", "material", "design-system"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulelyson/elyui.git"
+    "url": "git+https://github.com/paulelyson/elyui.git"
   },
   "dependencies": {
     "tslib": "^2.3.0"

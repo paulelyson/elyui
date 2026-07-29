@@ -7,7 +7,7 @@ Angular Material is powerful, but its defaults are opinionated (ripples, elevate
 ## Install
 
 ```bash
-npm install elyui @angular/material @angular/cdk
+npm install @paulelyson/elyui @angular/material @angular/cdk
 ```
 
 `@angular/core`, `@angular/common`, `@angular/forms`, and `rxjs` are also peer dependencies, but you already have them in any Angular app.
@@ -17,7 +17,7 @@ npm install elyui @angular/material @angular/cdk
 **1. Import the theme.** Add it to your `angular.json` `styles` array (or `@import` it from your own global stylesheet) — it defines every CSS variable the components render with:
 
 ```json
-"styles": ["node_modules/elyui/styles/elyui.css", "src/styles.css"]
+"styles": ["node_modules/@paulelyson/elyui/styles/elyui.css", "src/styles.css"]
 ```
 
 **2. Load the Material Icons font.** `Icon` (and anything that renders one internally) uses ligature icon names and expects this font to be available:
@@ -40,7 +40,7 @@ export const appConfig: ApplicationConfig = {
 
 ```ts
 import { Component } from '@angular/core';
-import { Button, Badge } from 'elyui';
+import { Button, Badge } from '@paulelyson/elyui';
 
 @Component({
   selector: 'app-example',
@@ -56,7 +56,7 @@ export class Example {}
 Snackbar is opened imperatively via its service:
 
 ```ts
-import { SnackbarService } from 'elyui';
+import { SnackbarService } from '@paulelyson/elyui';
 
 constructor(private snackbar: SnackbarService) {}
 
