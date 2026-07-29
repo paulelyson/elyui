@@ -57,6 +57,21 @@ Example flow:
 - Me: "Next, copy the card component."
 - You: copy card component → summarize → **wait**.
 
+### Source-quality classification (added after v0.1.0 shipped)
+
+The "copy as-is, no enhancement" rule assumes the source component is *good*. Several remaining source components are stubs, carry bugs, or have completely empty `.css` files — for those, strict copying would import defects into a **published** package.
+
+So before copying, classify the source and say which it is:
+
+- **`solid`** — copy as-is. The rule above is unchanged.
+- **`stub` / `broken` / `unstyled`** — flag it, state specifically what's missing or wrong and what would need building, then **wait for my call.** Do not silently copy the defect, and do not silently fix it either.
+
+Known cases: the form controls `autocomplete`, `datepicker`, `dropdown`, and `tab` have 0-byte stylesheets — **I have already decided these get a proper minimalist skin built during migration**, to the Badge tokenization standard. `avatar` (hardcoded `placehold.co` URL, crashes on empty label), `empty-placeholder` (hardcoded "No items." string, no input), `side-navigation` (near-stub, no API), and `file-input` (temporary server-migration message in the template) all need flagging when their turn comes.
+
+`toggle-button-group` is **dropped from the migration entirely** — it's an empty stub already superseded by `SegmentedControl`.
+
+The one-component-per-go-signal rule is untouched by any of this.
+
 ## Coding Style
 
 When enhancement or new code IS requested, match my existing coding style. Consistency with the existing codebase takes priority over newer idioms.

@@ -4,7 +4,7 @@ import { MAT_SNACK_BAR_DATA, MatSnackBarModule, MatSnackBarRef } from '@angular/
 import { Icon } from '../icon/icon';
 import { Variant } from '../../models/ui/common-config.model';
 
-type SnackBarType = 'primary' | 'success' | 'warning' | 'error' | 'dafault';
+export type SnackBarType = 'primary' | 'success' | 'warning' | 'error' | 'dafault';
 
 export interface ISnackBarConfig {
   type: SnackBarType;

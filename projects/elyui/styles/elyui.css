@@ -3,7 +3,7 @@
  *
  * Import this alongside your global styles to make elyui components render
  * correctly, e.g. in angular.json:
- *   "styles": ["node_modules/elyui/styles/elyui.css", "src/styles.css"]
+ *   "styles": ["node_modules/@paulelyson/elyui/styles/elyui.css", "src/styles.css"]
  *
  * Every value below is a CSS variable — override any of them in your own
  * global stylesheet (after this import) to retheme the library. No rebuild,

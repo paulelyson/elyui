@@ -1,18 +1,22 @@
 # elyui (workspace)
 
-This is the **development workspace** for [elyui](projects/elyui/README.md) — not the published package itself. The publishable library lives in `projects/elyui/`; everything else here (`src/`) is a demo app that consumes the library exactly like an external project would, and doubles as a living overview of every component.
+**Angular Material under the hood, dressed in a clean minimalist skin.**
 
-If you're looking to *use* elyui in your own project, see [`projects/elyui/README.md`](projects/elyui/README.md) instead.
+This is the **development workspace** — not the package. The publishable library lives in `projects/elyui/` and ships to npm as [`@paulelyson/elyui`](https://www.npmjs.com/package/@paulelyson/elyui). Everything else here (`src/`) is a demo app that consumes the library exactly like an external project would, and doubles as a living overview of every component.
+
+> **Looking to actually *use* elyui?** You want [`projects/elyui/README.md`](projects/elyui/README.md), not this file.
 
 ## The Goal
 
-Angular Material is powerful, but its defaults are opinionated (ripples, elevated backgrounds, heavy visual identity) and its usage is verbose. elyui keeps what Material does best — accessibility, keyboard handling, overlays, form-control plumbing — and replaces everything you *see* with a minimal, flat, easily themeable skin.
+Angular Material is genuinely great at the hard parts — accessibility, keyboard handling, overlay positioning, form-control plumbing — and elyui keeps all of it. What it throws out is everything you *see*: the ripples, the elevated backgrounds, the heavy visual identity, and the small mountain of template markup you write to get a single styled input on screen.
+
+Keep Material's brain. Lose its wardrobe.
 
 ### Principles
 
-- **Minimalistic by default.** No ripple. No default backgrounds. No visual noise. Just clean, flat components.
-- **Theme with CSS variables.** Override colors, spacing, and radii by updating CSS variables — no Material theming API, no rebuild.
-- **You control the focus glow.** The focus ring/glow can be disabled per component — it's your call, not the library's.
+- **Minimalistic by default.** No ripple. No default backgrounds. No visual noise. Flat and clean.
+- **Theme with CSS variables.** Override colors, spacing, and radii by editing CSS variables — no Sass, no Material theming API, no rebuild.
+- **You control the focus glow.** It can be switched off per component. Opinions, not rules.
 - **DX first: one line of HTML.** The verbosity lives inside the library, not in your templates.
 
 ## Workspace layout
@@ -29,7 +33,7 @@ elyui/
 
 ## Status
 
-Pre-1.0 (`0.1.0`). Components are being built out one at a time; a first set (Icon, Badge, Button, Toggle, Snackbar, SegmentedControl) is published.
+Pre-1.0 (`0.1.0`), live on npm. Components are migrated one at a time; the first set (Icon, Badge, Button, Toggle, Snackbar, SegmentedControl) is published. Form controls are next.
 
 ## Development
 
