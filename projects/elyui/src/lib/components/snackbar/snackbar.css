@@ -48,7 +48,7 @@
       /* line-height: var(--line-height-sm);
       font-weight: var(--font-weight-book); */
       font-size: 13px;
-      font-family: Poppins;
+      font-family: inherit;
       font-feature-settings: 'case' on;
       /* ul and li bullt padding overrides*/
       margin: 0;

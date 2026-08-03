@@ -5,7 +5,10 @@
   cursor: pointer;
   transition: 0.5s ease;
   font-weight: 550;
-  font-family: 'Poppins';
+  /* Inherit the host app's typeface — the library deliberately doesn't ship
+     or impose a font. Native <button> doesn't inherit font-family by default,
+     so this has to be stated explicitly. */
+  font-family: inherit;
   border: 1px solid transparent;
 }
 

@@ -1,6 +1,8 @@
 # elyui
 
-**Angular Material under the hood, dressed in a clean minimalist skin.**
+**A developer-friendly Angular Material.**
+
+Angular Material under the hood, dressed in a clean minimalist skin.
 
 An npm package nobody asked for. Built anyway.
 

@@ -14,8 +14,15 @@
 
 .page-header__tagline {
   margin: 0.5rem 0 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--color-text);
+}
+
+.page-header__subtagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-gray-light);
 }
 
 .page-header__links {

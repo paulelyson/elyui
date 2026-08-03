@@ -1,6 +1,6 @@
 # elyui (workspace)
 
-**Angular Material under the hood, dressed in a clean minimalist skin.**
+**A developer-friendly Angular Material.**
 
 This is the **development workspace** — not the package. The publishable library lives in `projects/elyui/` and ships to npm as [`@paulelyson/elyui`](https://www.npmjs.com/package/@paulelyson/elyui). Everything else here (`src/`) is a demo app that consumes the library exactly like an external project would, and doubles as a living overview of every component.
 
