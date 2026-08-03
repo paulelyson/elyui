@@ -1,6 +1,6 @@
 {
   "name": "@paulelyson/elyui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Angular Material under the hood, dressed in a clean minimalist skin. A CSS-variable-themeable component library.",
   "license": "MIT",
   "sideEffects": false,

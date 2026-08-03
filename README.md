@@ -33,7 +33,7 @@ elyui/
 
 ## Status
 
-Pre-1.0 (`0.1.0`), live on npm. Components are migrated one at a time; the first set (Icon, Badge, Button, Toggle, Snackbar, SegmentedControl) is published. Form controls are next.
+Pre-1.0, live on npm. Components are migrated one at a time; the first set (Icon, Badge, Button, Toggle, Snackbar, SegmentedControl) is published. Form controls are next.
 
 ## Development
 

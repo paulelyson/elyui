@@ -229,7 +229,7 @@ Not shipped yet — coming in a future release, alongside `input`, `textarea`, `
 
 ## Status
 
-Pre-1.0 (`0.1.0`). The API may still shift as more components land. Pin the version if that bothers you.
+Pre-1.0. The API may still shift as more components land. Pin the version if that bothers you.
 
 ## License
 
