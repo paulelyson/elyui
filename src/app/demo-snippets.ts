@@ -1,0 +1,178 @@
+/**
+ * Source snippets shown alongside each live example on the overview page.
+ *
+ * These must be kept in sync by hand with the markup in `app.html` — each
+ * entry is the exact code that renders the example directly beneath it.
+ * When you change an example, change its snippet in the same edit.
+ */
+export const SNIPPETS = {
+  // ── Icon ──────────────────────────────────────────────────────────────
+  iconSizes: `<ely-icon name="star" size="xs" tooltip="xs" />
+<ely-icon name="star" size="sm" tooltip="sm" />
+<ely-icon name="star" size="md" tooltip="md" />
+<ely-icon name="star" size="lg" tooltip="lg" />`,
+
+  iconVariants: `<ely-icon name="circle" variant="neutral" tooltip="neutral" />
+<ely-icon name="info" variant="primary" tooltip="primary" />
+<ely-icon name="bookmark" variant="accent" tooltip="accent" />
+<ely-icon name="check_circle" variant="success" tooltip="success" />
+<ely-icon name="warning" variant="warning" tooltip="warning" />
+<ely-icon name="error" variant="danger" tooltip="danger" />`,
+
+  iconClickable: `<ely-icon name="favorite" [clickable]="true" tooltip="clickable" />
+<ely-icon name="lock" [clickable]="false" tooltip="not clickable" />`,
+
+  // ── Badge ─────────────────────────────────────────────────────────────
+  badgeSizes: `<ely-badge size="xs" variant="primary">xs</ely-badge>
+<ely-badge size="sm" variant="primary">sm</ely-badge>
+<ely-badge size="md" variant="primary">md</ely-badge>
+<ely-badge size="lg" variant="primary">lg</ely-badge>`,
+
+  badgeVariants: `<ely-badge variant="neutral">neutral</ely-badge>
+<ely-badge variant="primary">primary</ely-badge>
+<ely-badge variant="accent">accent</ely-badge>
+<ely-badge variant="success">success</ely-badge>
+<ely-badge variant="warning">warning</ely-badge>
+<ely-badge variant="danger">danger</ely-badge>`,
+
+  badgeIcons: `<ely-badge variant="primary" [hasBadgeIcon]="true">info</ely-badge>
+<ely-badge variant="danger" [hasCloseIcon]="true">closable</ely-badge>`,
+
+  badgeBorder: `<ely-badge variant="primary">bordered</ely-badge>
+<ely-badge variant="primary" [hasBorder]="false">seamless</ely-badge>`,
+
+  // ── Button ────────────────────────────────────────────────────────────
+  buttonSizes: `<ely-button size="xs" variant="primary">xs</ely-button>
+<ely-button size="sm" variant="primary">sm</ely-button>
+<ely-button size="md" variant="primary">md</ely-button>
+<ely-button size="lg" variant="primary">lg</ely-button>`,
+
+  buttonFilled: `<ely-button appearance="filled" variant="neutral">neutral</ely-button>
+<ely-button appearance="filled" variant="primary">primary</ely-button>
+<ely-button appearance="filled" variant="accent">accent</ely-button>
+<ely-button appearance="filled" variant="success">success</ely-button>
+<ely-button appearance="filled" variant="warning">warning</ely-button>
+<ely-button appearance="filled" variant="danger">danger</ely-button>`,
+
+  buttonTonal: `<ely-button appearance="tonal" variant="neutral">neutral</ely-button>
+<ely-button appearance="tonal" variant="primary">primary</ely-button>
+<ely-button appearance="tonal" variant="accent">accent</ely-button>
+<ely-button appearance="tonal" variant="success">success</ely-button>
+<ely-button appearance="tonal" variant="warning">warning</ely-button>
+<ely-button appearance="tonal" variant="danger">danger</ely-button>`,
+
+  buttonOutlined: `<ely-button appearance="outlined" variant="neutral">neutral</ely-button>
+<ely-button appearance="outlined" variant="primary">primary</ely-button>
+<ely-button appearance="outlined" variant="accent">accent</ely-button>
+<ely-button appearance="outlined" variant="success">success</ely-button>
+<ely-button appearance="outlined" variant="warning">warning</ely-button>
+<ely-button appearance="outlined" variant="danger">danger</ely-button>`,
+
+  buttonGhost: `<ely-button appearance="ghost" variant="neutral">neutral</ely-button>
+<ely-button appearance="ghost" variant="primary">primary</ely-button>
+<ely-button appearance="ghost" variant="accent">accent</ely-button>
+<ely-button appearance="ghost" variant="success">success</ely-button>
+<ely-button appearance="ghost" variant="warning">warning</ely-button>
+<ely-button appearance="ghost" variant="danger">danger</ely-button>`,
+
+  buttonLink: `<ely-button appearance="link" variant="neutral">neutral</ely-button>
+<ely-button appearance="link" variant="primary">primary</ely-button>
+<ely-button appearance="link" variant="accent">accent</ely-button>
+<ely-button appearance="link" variant="success">success</ely-button>
+<ely-button appearance="link" variant="warning">warning</ely-button>
+<ely-button appearance="link" variant="danger">danger</ely-button>`,
+
+  buttonIconOnly: `<ely-button appearance="icon" variant="neutral" icon="home" />
+<ely-button appearance="icon" variant="primary" icon="star" />
+<ely-button appearance="icon" variant="accent" icon="bookmark" />
+<ely-button appearance="icon" variant="success" icon="check" />
+<ely-button appearance="icon" variant="warning" icon="warning" />
+<ely-button appearance="icon" variant="danger" icon="delete" />`,
+
+  buttonWithIcon: `<ely-button appearance="tonal" variant="primary" icon="star">favorite</ely-button>
+<ely-button appearance="outlined" variant="warning" icon="star">favorite</ely-button>`,
+
+  buttonBorder: `<ely-button appearance="tonal" variant="primary">bordered</ely-button>
+<ely-button appearance="tonal" variant="primary" [hasBorder]="false">seamless</ely-button>
+<ely-button appearance="outlined" variant="danger">bordered</ely-button>
+<ely-button appearance="outlined" variant="danger" [hasBorder]="false">seamless</ely-button>`,
+
+  buttonRadius: `<ely-button appearance="filled" variant="primary">rounded</ely-button>
+<ely-button appearance="filled" variant="primary" [hasRadius]="false">square</ely-button>`,
+
+  buttonWidth: `<ely-button appearance="filled" variant="primary" width="width-filled">full width</ely-button>`,
+
+  buttonDisabled: `<ely-button appearance="filled" variant="primary" [disabled]="true">disabled</ely-button>
+<ely-button appearance="outlined" variant="primary" [disabled]="true">disabled</ely-button>`,
+
+  // ── Toggle ────────────────────────────────────────────────────────────
+  toggleState: `<ely-toggle label="off" [isChecked]="false" />
+<ely-toggle label="on" [isChecked]="true" />`,
+
+  toggleBadge: `<ely-toggle label="notifications" [isChecked]="true" [badge]="3" />`,
+
+  toggleTooltip: `<ely-toggle label="hover me" tooltip="Enable notifications" />`,
+
+  toggleFocusGlow: `<ely-toggle label="glow" [isChecked]="true" />
+<ely-toggle label="no glow" [isChecked]="true" [hasFocusGlow]="false" />`,
+
+  // ── Snackbar ──────────────────────────────────────────────────────────
+  snackbarVariants: `// Inject the service, then open a snackbar imperatively.
+constructor(private snackbarService: SnackbarService) {}
+
+showSnackbar(type: ISnackBarConfig['type']): void {
+  this.snackbarService.openSnackbar({
+    type,
+    message: [\`This is a \${type} snackbar message.\`],
+    icon: 'info',
+  });
+}`,
+
+  snackbarBorder: `// hasBorder defaults to true; pass false for a seamless surface.
+this.snackbarService.openSnackbar({
+  type: 'primary',
+  message: ['This is a primary snackbar message.'],
+  icon: 'info',
+  hasBorder: false,
+});`,
+
+  // ── Segmented control ─────────────────────────────────────────────────
+  segmentedPaperSize: `// In your component:
+paperSizeOptions: SegmentedControlOption[] = [
+  { value: 'A4', label: 'A4', icon: 'description' },
+  { value: 'LETTER', label: 'Letter', icon: 'description' },
+  { value: 'LEGAL', label: 'Legal (long bond)', icon: 'description' },
+];
+
+// In your template:
+<ely-segmented-control [options]="paperSizeOptions" value="A4" />`,
+
+  segmentedOrientation: `// In your component:
+orientationOptions: SegmentedControlOption[] = [
+  { value: 'portrait', label: 'Portrait', icon: 'crop_portrait' },
+  { value: 'landscape', label: 'Landscape', icon: 'crop_landscape' },
+];
+
+// In your template:
+<ely-segmented-control [options]="orientationOptions" value="portrait" />`,
+
+  segmentedVariants: `<ely-segmented-control [options]="orientationOptions" value="portrait" variant="primary" />
+<ely-segmented-control [options]="orientationOptions" value="portrait" variant="success" />
+<ely-segmented-control [options]="orientationOptions" value="portrait" variant="danger" />`,
+
+  segmentedSizes: `<ely-segmented-control [options]="orientationOptions" value="portrait" size="xs" />
+<ely-segmented-control [options]="orientationOptions" value="portrait" size="lg" />`,
+
+  segmentedBorder: `<ely-segmented-control [options]="orientationOptions" value="portrait" />
+<ely-segmented-control [options]="orientationOptions" value="portrait" [hasBorder]="false" />`,
+
+  segmentedRadius: `<ely-segmented-control [options]="orientationOptions" value="portrait" />
+<ely-segmented-control [options]="orientationOptions" value="portrait" [hasRadius]="false" />`,
+
+  segmentedDisabled: `<ely-segmented-control [options]="orientationOptions" value="portrait" [disabled]="true" />`,
+
+  segmentedMultiple: `<ely-segmented-control
+  [options]="paperSizeOptions"
+  [multiple]="true"
+  [value]="['A4', 'LETTER']" />`,
+} as const;

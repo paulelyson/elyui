@@ -1,0 +1,60 @@
+.example {
+  border: 1px solid var(--color-border-gray-idle);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: #fff;
+}
+
+.example__label {
+  padding: 0.5rem 0.875rem;
+  border-bottom: 1px solid var(--color-border-gray-idle);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.example__code {
+  position: relative;
+  background: var(--color-bg-gray-idle);
+  border-bottom: 1px solid var(--color-border-gray-idle);
+}
+
+.example__code pre {
+  margin: 0;
+  padding: 0.875rem;
+  overflow-x: auto;
+}
+
+.example__code code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-text);
+  white-space: pre;
+}
+
+.example__copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 2px 8px;
+  border: 1px solid var(--color-border-gray-idle);
+  border-radius: var(--border-radius-xs);
+  background: #fff;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-gray-light);
+  cursor: pointer;
+}
+
+.example__copy:hover {
+  color: var(--color-text);
+}
+
+.example__render {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 0.875rem;
+}

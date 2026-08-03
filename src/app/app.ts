@@ -10,15 +10,19 @@ import {
   SnackbarService,
   SegmentedControlOption,
 } from 'elyui';
+import { CodeExample } from './code-example/code-example';
+import { SNIPPETS } from './demo-snippets';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Icon, Badge, Button, Toggle, SegmentedControl],
+  imports: [RouterOutlet, Icon, Badge, Button, Toggle, SegmentedControl, CodeExample],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('elyui');
+
+  protected readonly snippets = SNIPPETS;
 
   protected readonly paperSizeOptions: SegmentedControlOption[] = [
     { value: 'A4', label: 'A4', icon: 'description' },

@@ -1,0 +1,16 @@
+<div class="example">
+  @if (label) {
+    <div class="example__label">{{ label }}</div>
+  }
+
+  <div class="example__code">
+    <button type="button" class="example__copy" (click)="onCopy()">
+      {{ copied ? 'copied' : 'copy' }}
+    </button>
+    <pre><code>{{ code }}</code></pre>
+  </div>
+
+  <div class="example__render">
+    <ng-content></ng-content>
+  </div>
+</div>
