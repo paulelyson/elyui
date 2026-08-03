@@ -12,17 +12,112 @@ Angular Material is genuinely excellent at the parts that are actually hard. Acc
 
 The problem is everything else.
 
-You wanted a text input. You got four module imports, a `<mat-form-field>` wrapper, and a template that's now long enough to need scrolling. Then you tried to change the color and discovered you're in Sass-land, learning a theming API, rebuilding to see a hex code change.
+You wanted a small green button. You got two module imports, a nested `<mat-icon>`, and a stylesheet where you're overriding `--mdc-` custom properties because Material's palette has `primary` and `error` but no idea what `success` means to your app.
 
-Your component file has become a scroll simulator and you still haven't written any actual features.
+Your template has become a scroll simulator and you still haven't written any actual features.
 
 elyui keeps Material's brain and throws out its wardrobe.
 
-## The pitch, in two diffs
+---
+
+## The pitch
+
+Every elyui snippet below is real, working API — the same inputs the demo page in this repo exercises. Nothing here is aspirational marketing.
+
+### Buttons
+
+**Angular Material.** Two module imports, one size, and whatever colors your theme palette happens to define:
+
+```ts
+imports: [MatButtonModule, MatIconModule]
+```
+
+```html
+<button matButton="filled">
+  <mat-icon>star</mat-icon>
+  favorite
+</button>
+```
+
+Want it small? Material has no size scale — that's your CSS to write. Want it green *because it's a success action*? Material gives you your theme's primary / secondary / tertiary / error. There's no `success`, no `warning`. So you're overriding `--mdc-*` custom properties or reaching into `.mat-mdc-button-base` internals, per state, forever.
+
+**elyui.** One import, one line, and every axis is just an attribute:
+
+```html
+<ely-button appearance="filled" variant="success" size="md" icon="star">favorite</ely-button>
+```
+
+| Input | Values |
+| --- | --- |
+| `appearance` | `filled` · `tonal` · `outlined` · `ghost` · `link` · `icon` |
+| `variant` | `neutral` · `primary` · `accent` · `success` · `warning` · `danger` |
+| `size` | `xs` · `sm` · `md` · `lg` |
+| `icon` | any Material Icons ligature — no `<mat-icon>` nesting |
+| `hasBorder` / `hasRadius` | `false` for a seamless or square look |
+| `width` | `width-auto` · `width-filled` |
+
+That's 144 combinations of appearance × variant × size out of a single tag, and not one line of CSS on your side:
+
+```html
+<ely-button appearance="tonal" variant="danger" size="xs">delete</ely-button>
+<ely-button appearance="outlined" variant="warning" icon="star">favorite</ely-button>
+<ely-button appearance="icon" variant="accent" icon="bookmark" />
+<ely-button appearance="filled" variant="primary" [hasRadius]="false">square</ely-button>
+```
+
+### Badges
+
+Careful with names here: Material's `matBadge` is the little notification dot that floats over another element — not this. The closest Material analogue to a status label is a **chip**, which was designed for input and filtering, not for labelling state:
+
+```html
+<mat-chip-set>
+  <mat-chip>Active</mat-chip>
+</mat-chip-set>
+```
+
+A chip is meant to live inside a `<mat-chip-set>` (or `mat-chip-listbox` / `mat-chip-grid`), so a single status label drags a wrapper element along with it. And there is no variant, no size, no semantic color — **every chip looks identical**. One green "Active" and one red "Overdue" means hand-writing CSS against `.mat-mdc-chip` internals for each state your app has.
+
+**elyui:**
+
+```html
+<ely-badge variant="success" size="md">Active</ely-badge>
+<ely-badge variant="danger" [hasCloseIcon]="true">Overdue</ely-badge>
+<ely-badge variant="primary" [hasBadgeIcon]="true">Info</ely-badge>
+<ely-badge variant="neutral" [hasBorder]="false">Seamless</ely-badge>
+```
+
+Same six variants, same four sizes, no wrapper. `hasBadgeIcon` prepends an info icon, `hasCloseIcon` appends a dismiss icon that emits `(closed)`.
+
+### Icons
+
+This one's closer to a fair fight — `<mat-icon>star</mat-icon>` is already short. The friction is everything around it.
+
+`mat-icon` is locked to 24px, and resizing it is the classic Material gotcha: setting `font-size` alone leaves the element's `width` and `height` at 24px, so your layout quietly breaks until you remember to write all three. Color inherits `currentColor`, so semantic coloring is on you. A tooltip is another module import.
+
+```html
+<mat-icon class="icon-lg-success" matTooltip="done">star</mat-icon>
+```
+
+```css
+.icon-lg-success {
+  font-size: 32px;
+  width: 32px;   /* don't forget */
+  height: 32px;  /* seriously, don't forget */
+  color: #539364;
+}
+```
+
+**elyui:**
+
+```html
+<ely-icon name="star" size="lg" variant="success" tooltip="done" />
+```
+
+Sizes and variants come from the same scale every other component uses, so an `md` icon lines up with an `md` button without you measuring anything. `[clickable]="false"` drops the pointer cursor when it's decorative.
 
 ### Snackbars
 
-**Angular Material** — you have to author an entire component before you can show a single toast:
+The one that hurts most. In Material you have to author an entire component before you can show a single toast:
 
 ```ts
 @Component({
@@ -109,7 +204,7 @@ Requires **Angular 21+**.
 
 ## Setup
 
-**1. Import the theme.** Add it to your `angular.json` `styles` array (or `@import` it from your own global stylesheet). This defines every CSS variable the components render with — without it, components will render unstyled:
+**1. Import the theme.** Add it to your `angular.json` `styles` array (or `@import` it from your own global stylesheet). This defines every CSS variable the components render with — without it, components render unstyled:
 
 ```json
 "styles": [
@@ -143,14 +238,15 @@ Components are standalone — import the ones you use, no `NgModule`:
 
 ```ts
 import { Component } from '@angular/core';
-import { Button, Badge } from '@paulelyson/elyui';
+import { Button, Badge, Icon } from '@paulelyson/elyui';
 
 @Component({
   selector: 'app-example',
-  imports: [Button, Badge],
+  imports: [Button, Badge, Icon],
   template: `
     <ely-button appearance="filled" variant="primary" icon="save">Save</ely-button>
     <ely-badge variant="success">Active</ely-badge>
+    <ely-icon name="star" size="lg" variant="warning" tooltip="favorite" />
   `,
 })
 export class Example {}
