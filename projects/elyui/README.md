@@ -221,18 +221,7 @@ Requires **Angular 21+**.
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 ```
 
-**3. Provide animations.** `Snackbar` needs them to enter and exit:
-
-```ts
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
-export const appConfig: ApplicationConfig = {
-  providers: [
-    provideAnimationsAsync(),
-    // ...your other providers
-  ],
-};
-```
+That's it — there's no third step. Angular Material 21 animates via CSS, so you do **not** need `provideAnimationsAsync()` or the `@angular/animations` package.
 
 ## Usage
 
