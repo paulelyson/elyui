@@ -4,6 +4,8 @@
 
 An npm package nobody asked for. Built anyway.
 
+**[→ Live demo](https://paulelyson.github.io/elyui/)** — every component, every variant, every size, on one page.
+
 ---
 
 ## Why though

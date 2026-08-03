@@ -1,3 +1,63 @@
+.page-header {
+  padding: 3rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border-gray-idle);
+  margin-bottom: 1rem;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.page-header__tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.page-header__links {
+  margin: 1rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.page-header__links a {
+  color: var(--color-text-accent-default);
+  text-decoration: none;
+}
+
+.page-header__links a:hover {
+  text-decoration: underline;
+}
+
+.page-header__links span {
+  color: var(--color-text-gray-light);
+}
+
+.page-header__note {
+  margin: 1rem 0 0;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-gray-light);
+}
+
+.page-header__install {
+  margin: 1.25rem 0 0;
+  padding: var(--padding-md);
+  display: inline-block;
+  background: var(--color-bg-gray-idle);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 .icon-overview {
   padding: 1.5rem;
 }
