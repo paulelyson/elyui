@@ -2,3 +2,13 @@
    ships from projects/elyui/styles/elyui.css and is wired in via angular.json's
    "styles" array for the demo build target, so this file exercises the exact
    asset that gets published rather than a separate copy. */
+
+/* Poppins is the demo app's typeface, set here rather than in the shipped
+   theme on purpose: the library deliberately doesn't impose a font, so it
+   inherits whatever the consuming app already uses. Components below pick
+   this up by inheritance — none of them declare a font-family of their own. */
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--color-text);
+}
